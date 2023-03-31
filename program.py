@@ -46,7 +46,6 @@ def onions():
         answerOnion = input()
         if answerOnion == "y":
             numToppings = numToppings + 1
-            listOfI = listOfI + ""
             askOnions = True
         elif answerOnion == "n":
             askOnions = True
