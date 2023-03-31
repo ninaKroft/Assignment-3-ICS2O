@@ -23,71 +23,30 @@ def pizzaSize():
             print("Please enter 'l' for a large pizza or 'xl' for an extra large pizza.")
     return sizeCost
 
-def pepperoni():
-    print("Would you like to add pepperoni as a topping? Enter 'y' for yes or 'n' for no.")
-    global numToppings
-    askPepperoni = False
-    while askPepperoni == False:
-        answerPep = input()
-        if answerPep == "y":
-            numToppings = numToppings + 1
-            askPepperoni = True
-        elif answerPep == "n":
-            askPepperoni = True
-        else:
-            print("Please enter 'y' if you want pepperoni or 'n' if you do not.")
-    return toppings
-
-def onions():
-    print("Would you like to add onions as a topping? Enter 'y' for yes or 'n' for no.")
-    askOnions = False
-    global numToppings
-    while askOnions == False:
-        answerOnion = input()
-        if answerOnion == "y":
-            numToppings = numToppings + 1
-            askOnions = True
-        elif answerOnion == "n":
-            askOnions = True
-        else:
-            print("Please enter 'y' if you want onions or 'n' if you do not.")
-    return toppings
-
-def peppers():
-    print("Would you like to add peppers as a topping? Enter 'y' for yes or 'n' for no.")
-    askPeppers = False
-    global numToppings
-    while askPeppers == False:
-        answerPep = input()
-        if answerPep == "y":
-            numToppings = numToppings + 1
-            askPeppers = True
-        elif answerPep == "n":
-            askPeppers = True
-        else:
-            print("Please enter 'y' if you want peppers or 'n' if you do not.")
-    return toppings
-
-def meatballs():
-    print("Would you like to add meatballs as a topping? Enter 'y' for yes or 'n' for no.")
-    askMeatballs = False
-    global numToppings
-    while askMeatballs == False:
-        answerMB = input()
-        if answerMB == "y":
-            numToppings = numToppings + 1
-            askMeatballs = True
-        elif answerMB == "n":
-            askMeatballs = True
-        else:
-            print("Please enter 'y' if you want meatballs or 'n' if you do not.")
-    return toppings
-
 def toppings():
-    pepperoni()
-    onions()
-    peppers()
-    meatballs()
+    global numToppings
+    for a in range(1, 5):
+        complete = False
+        if a == 1:
+            tType = "pepperoni"
+        elif a == 2:
+            tType = "onions"
+        elif a == 3:
+            tType = "peppers"
+        elif a == 4:
+            tType = "meatballs"
+        print("Would you like to add " + tType + " as a topping? Enter 'y' for yes or 'n' for no.")
+        while complete == False:
+            answer = input()
+            if answer == "y":
+                numToppings = numToppings + 1
+                complete = True
+            elif answer == "n":
+                complete = True
+            else:
+                print("Please enter 'y' if you want " + tType + " or 'n' if you do not.")
+
+    return numToppings
     
 def calcToppings():
     toppings()
@@ -107,5 +66,5 @@ def finalCost():
     finalCost = ( pizzaSize() + calcToppings()) * 1.13
     return finalCost
 
-print("Welcome to SH Pizza!")
+print("Welcome to SH pizza!")
 print("Your pizza will cost", finalCost(), "$")
