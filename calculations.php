@@ -7,7 +7,7 @@
 <body>
 <?php
   $topping = $_POST['formTopping'];
-    $N = count($aDoor);
+    $N = count($topping);
 
     echo("You selected $N topping(s): ");
     for($i=0; $i < $N; $i++)
