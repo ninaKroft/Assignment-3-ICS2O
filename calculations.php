@@ -6,6 +6,9 @@
 </head>
 <body>
 <?php
+  $size = $_POST['size'];
+   echo($size);
+   
   $topping = $_POST['formTopping'];
     $N = count($topping);
 

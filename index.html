@@ -5,13 +5,19 @@
 <title>SH Pizza</title>
 </head>
 <body>
+
+        
     <form action="calculations.php" method="post">
 
+        <p>What size would you like your pizza to be?</p>
+        <input type="radio" name="size" id="text" value="Large" />Large<br>
+        <input type="radio" name="size" id="text" value="Extra large" />Extra large<br>
+
         <p>Which toppings would you like?</p><br>
-        <input type="checkbox" name="formTopping[]" value="A" />Pepperoni<br>
-        <input type="checkbox" name="formTopping[]" value="B" />Onions<br>
-        <input type="checkbox" name="formTopping[]" value="C" />Peppers<br>
-        <input type="checkbox" name="formTopping[]" value="D" />Meatballs<br>
+        <input type="checkbox" name="formTopping[]" value="Pepperoni" />Pepperoni<br>
+        <input type="checkbox" name="formTopping[]" value="Onions" />Onions<br>
+        <input type="checkbox" name="formTopping[]" value="Peppers" />Peppers<br>
+        <input type="checkbox" name="formTopping[]" value="Meatballs" />Meatballs<br>
         
         <input type="submit" name="formSubmit" value="Submit" />
         
