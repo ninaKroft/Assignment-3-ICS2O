@@ -7,8 +7,8 @@
 <body>
 <?php
   $size = $_POST['size'];
-   echo($size);
-   
+   echo($size /n);
+
   $topping = $_POST['formTopping'];
     $N = count($topping);
 
