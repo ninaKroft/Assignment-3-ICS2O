@@ -78,25 +78,25 @@
     }
     </style>
 
-    <center><div class="demo-card-event mdl-card mdl-shadow--2dp"></center>
+    <div class="demo-card-event mdl-card mdl-shadow--2dp">
       <div class="mdl-card__title mdl-card--expand">
         <h4>
         <?php
 
 $size = $_POST['size'];
- echo "<p class='text'>" . "You selected a(n) $size pizza." . "</p>"; "<br>";
+ echo "<p class='text' style='font-weight:bold;'>" . "You selected a(n) $size pizza." . "</p>"; "<br>";
 
 $topping = $_POST['formTopping'];
   $N = count($topping);
   if ($N > 0){
-  echo "<p class='text'>" . "You selected $N topping(s): " . "</p>"; "<br>";
+  echo "<p class='text' style='font-weight:bold;'>" . "You selected $N topping(s): " . "</p>"; "<br>";
   for($i=0; $i < $N; $i++)
   {
     echo "<p class='text'>" . $topping[$i] . "<br>" . "</p"; "<br>";
   }
 }
 else {
-  echo "<p class='text'>" . "You did not select any toppings." . "</p>"; "<br>";
+  echo "<p class='text' style='font-weight:bold;'>" . "You did not select any toppings." . "</p>"; "<br>";
 }
 
 if ($N == 1){
@@ -124,7 +124,8 @@ $fPrice =  floatval($sPrice + $tPrice);
 $fPrice = floatval($fPrice * $tax);
 $fPrice = round($fPrice, 2);
 
-echo "<p class='text'>" . "Your pizza will cost $fPrice $" . "</p>";
+"<br>";
+echo "<p class='text' style='font-weight:bold;'>" . "Your pizza will cost $fPrice $" . "</p>";
 
 ?>
         </h4>
