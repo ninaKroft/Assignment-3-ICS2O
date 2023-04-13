@@ -17,69 +17,82 @@
 
 <!--<img src="./images/pizzaPicture.jpeg" alt="Picture of pizza" width="500" heigth="250"> -->
 
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Title</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation. We hide it in small screens. -->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="">Link</a>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Title</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link" href="">Link</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content"> <!-- content goes here -->
+    <div class="page-content"><form action="./calculations.php" method="post">
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+      <p>What size would you like your pizza to be?</p>
+      <br>
+      <br>
+      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+        <input type="radio" id="option-1" class="mdl-radio__button" name="size" value="Large" checked>
+        <span class="mdl-radio__label">Large</span>
+      </label>
+      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+        <input type="radio" id="option-2" class="mdl-radio__button" name="size" value="Extra large">
+        <span class="mdl-radio__label">Extra large</span>
+      </label>
+      <br>
+      <br>
+      
+      <p>Which toppings would you like?</p>
+      <br>
+      <br>
+      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+        <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" name="formTopping[]" value="Pepperoni">
+        <span class="mdl-checkbox__label">Pepperoni</span>
+      </label>
+      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+        <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" name="formTopping[]" value="Onions">
+        <span class="mdl-checkbox__label">Onions</span>
+      </label>
+      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
+        <input type="checkbox" id="checkbox-3" class="mdl-checkbox__input" name="formTopping[]" value="Peppers">
+        <span class="mdl-checkbox__label">Peppers</span>
+      </label>
+      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-4">
+        <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input" name="formTopping[]" value="Meatballs">
+        <span class="mdl-checkbox__label">Meatballs</span>
+      </label>
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+        Button
+      </button>
+      </form>
+      <br>
+      <br>
+      <br>
+      <br></div>
+  </main>
+</div>
         
 <!--Pizza form-->
-<!--<p>What size would you like your pizza to be?</p>
-<input type="radio" name="size" id="text" value="Large" class="mdl-radio mdl-js-radio mdl-js-ripple-effect"/>Large<br>
-<input type="radio" name="size" id="text" value="Extra large" class="mdl-radio mdl-js-radio mdl-js-ripple-effect"/>Extra large<br>
-<br> -->
-<form action="./calculations.php" method="post">
 
-<p>What size would you like your pizza to be?</p>
-<br>
-<br>
-<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-  <input type="radio" id="option-1" class="mdl-radio__button" name="size" value="Large" checked>
-  <span class="mdl-radio__label">Large</span>
-</label>
-<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-  <input type="radio" id="option-2" class="mdl-radio__button" name="size" value="Extra large">
-  <span class="mdl-radio__label">Extra large</span>
-</label>
-<br>
-<br>
-<!--<p>Which toppings would you like?</p><br>
-<input type="checkbox" name="formTopping[]" value="Pepperoni" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"/>Pepperoni<br>
-<input type="checkbox" name="formTopping[]" value="Onions" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"/>Onions<br>
-<input type="checkbox" name="formTopping[]" value="Peppers" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"/>Peppers<br>
-<input type="checkbox" name="formTopping[]" value="Meatballs" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"/>Meatballs<br> -->
 
-<p>Which toppings would you like?</p>
-<br>
-<br>
-<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
-  <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" name="formTopping[]" value="Pepperoni">
-  <span class="mdl-checkbox__label">Pepperoni</span>
-</label>
-<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
-  <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" name="formTopping[]" value="Onions">
-  <span class="mdl-checkbox__label">Onions</span>
-</label>
-<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
-  <input type="checkbox" id="checkbox-3" class="mdl-checkbox__input" name="formTopping[]" value="Peppers">
-  <span class="mdl-checkbox__label">Peppers</span>
-</label>
-<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-4">
-  <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input" name="formTopping[]" value="Meatballs">
-  <span class="mdl-checkbox__label">Meatballs</span>
-</label>
-<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
-  Button
-</button>
-<!-- <input type="submit" name="" value="Submit"> -->
-</form>
-<br>
-<br>
-<br>
-<br>
 
 <!-- Footer -->
       <footer class="mdl-mega-footer">

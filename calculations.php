@@ -57,6 +57,7 @@
 $tax = 1.13;
 $fPrice =  floatval($sPrice + $tPrice);
 $fPrice = floatval($fPrice * $tax);
+$fPrice = round($fPrice, 2);
 
 echo("Your pizza will cost $fPrice $");
 
