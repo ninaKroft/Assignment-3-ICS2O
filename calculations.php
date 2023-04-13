@@ -136,7 +136,7 @@ $fPrice = round($fPrice, 2);
     </div>
 </td>
 <td>
-  <img src="./images/pizzaPicture.jpeg" alt="Picture of pizza">
+  <img src="./images/pizzaPicture.jpeg" alt="Picture of pizza" witdth="180" height="160">
 </td>
 <td>
     <div class="demo-card-event mdl-card mdl-shadow--2dp">
@@ -150,12 +150,6 @@ $fPrice = round($fPrice, 2);
     ?>
     </h4>
   </div>
-  <div class="mdl-card__actions mdl-card--border">
-    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      To be deleted
-    </a>
-    <div class="mdl-layout-spacer"></div>
-    <i class="material-icons">Also to be deleted</i>
   </div>
 </td>
 </tr>

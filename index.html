@@ -47,42 +47,94 @@
     <center><h3 class="title">Welcome to SH pizza</h3></center>
     <center><h4 class="text">Order your pizza using the options below.</h3></center>
     <br>
-    <div class="page-content"><form action="./calculations.php" method="post">
+    <div class="page-content">
 
-      <p class="text">What size would you like your pizza to be?</p>
-      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-        <input type="radio" id="option-1" class="mdl-radio__button" name="size" value="large" checked>
-        <span class="mdl-radio__label">Large</span>
-      </label>
-      <br>
-      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-        <input type="radio" id="option-2" class="mdl-radio__button" name="size" value="extra large">
-        <span class="mdl-radio__label">Extra large</span>
-      </label>
-      <br>
-      <br>
-      <p class="text">Which toppings would you like?</p>
-      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
-        <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" name="formTopping[]" value="Pepperoni">
-        <span class="option">Pepperoni</span>
-      </label>
-      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
-        <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" name="formTopping[]" value="Onions">
-        <span class="option">Onions</span>
-      </label>
-      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
-        <input type="checkbox" id="checkbox-3" class="mdl-checkbox__input" name="formTopping[]" value="Peppers">
-        <span class="option">Peppers</span>
-      </label>
-      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-4">
-        <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input" name="formTopping[]" value="Meatballs">
-        <span class="option">Meatballs</span>
-      </label>
-      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
-        Button
-      </button>
-      </form>
-      <br>
+      <!-- Event card -->
+<style>
+  .demo-card-event.mdl-card {
+    width: 256px;
+    height: 256px;
+    background: orange;
+  }
+  .demo-card-event > .mdl-card__actions {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  .demo-card-event > .mdl-card__title {
+    align-items: flex-start;
+  }
+  .demo-card-event > .mdl-card__title > h4 {
+    margin-top: 0;
+  }
+  .demo-card-event > .mdl-card__actions {
+    display: flex;
+    box-sizing:border-box;
+    align-items: center;
+  }
+  .demo-card-event > .mdl-card__actions > .material-icons {
+    padding-right: 10px;
+  }
+  .demo-card-event > .mdl-card__title,
+  .demo-card-event > .mdl-card__actions,
+  .demo-card-event > .mdl-card__actions > .mdl-button {
+    color: #fff;
+  }
+  </style>
+  <center><table>
+    <tr>
+      <td>
+  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title mdl-card--expand">
+      <h4>
+        <form action="./calculations.php" method="post">
+          <p class="card-text" style="font-weight:bold;">What size would you like your pizza to be?</p>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+            <input type="radio" id="option-1" class="mdl-radio__button" name="size" value="large" checked>
+            <span class="card-text">Large</span>
+          </label>
+          <br>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+            <input type="radio" id="option-2" class="mdl-radio__button" name="size" value="extra large">
+            <span class="card-text" >Extra large</span>
+          </label>
+          </form>
+      </h4>
+    </div>
+    </div>
+  </div>
+</td>
+<td>
+  <div class="demo-card-event mdl-card mdl-shadow--2dp">
+    <div class="mdl-card__title mdl-card--expand">
+      <h4>
+        <form action="./calculations.php" method="post">
+        <p class="card-text" style="font-weight:bold;">Which toppings would you like?</p>
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+          <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" name="formTopping[]" value="Pepperoni">
+          <span class="card-text">Pepperoni</span>
+        </label>
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+          <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" name="formTopping[]" value="Onions">
+          <span class="card-text">Onions</span>
+        </label>
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
+          <input type="checkbox" id="checkbox-3" class="mdl-checkbox__input" name="formTopping[]" value="Peppers">
+          <span class="card-text">Peppers</span>
+        </label>
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-4">
+          <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input" name="formTopping[]" value="Meatballs">
+          <span class="card-text">Meatballs</span>
+        </label>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
+          Button
+        </button>
+        </form>
+      </h4>
+    </div>
+    </div>
+  </div>
+</td>
+</tr>
+</table></center>
       <br>
       <br>
       <br>
@@ -148,11 +200,4 @@
   </main>
 </div>
         
-<!--Pizza form-->
-
-
-
-
-
-    
 </body>
