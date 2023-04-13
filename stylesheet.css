@@ -1,3 +1,11 @@
+.title {
+    text-decoration:underline;
+    font-weight:bold;
+    color:rgb(1, 1, 48);
+    font-family:Verdana;
+}
+
 .text {
-    color:red;
+    font-family:Verdana;
+    color:rgb(1, 1, 48);
 }
