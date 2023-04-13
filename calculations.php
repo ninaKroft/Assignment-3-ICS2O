@@ -80,23 +80,24 @@
 
     <div class="demo-card-event mdl-card mdl-shadow--2dp">
       <div class="mdl-card__title mdl-card--expand">
-        <h4>
+        <h4> <!-- content here -->
+          <p class="card-text" style="text-decoration:underline;">Order summary</p>
         <?php
 
 $size = $_POST['size'];
- echo "<p class='text' style='font-weight:bold;'>" . "You selected a(n) $size pizza." . "</p>"; "<br>";
+ echo "<p class='card-text' style='font-weight:bold;'>" . "You selected a(n) $size pizza." . "</p>"; "<br>";
 
 $topping = $_POST['formTopping'];
   $N = count($topping);
   if ($N > 0){
-  echo "<p class='text' style='font-weight:bold;'>" . "You selected $N topping(s): " . "</p>"; "<br>";
+  echo "<p class='card-text' style='font-weight:bold;'>" . "You selected $N topping(s): " . "</p>"; "<br>";
   for($i=0; $i < $N; $i++)
   {
-    echo "<p class='text'>" . $topping[$i] . "<br>" . "</p"; "<br>";
+    echo "<p class='card-text'>" . $topping[$i] . "<br>" . "</p"; "<br>";
   }
 }
 else {
-  echo "<p class='text' style='font-weight:bold;'>" . "You did not select any toppings." . "</p>"; "<br>";
+  echo "<p class='card-text' style='font-weight:bold;'>" . "You did not select any toppings." . "</p>"; "<br>";
 }
 
 if ($N == 1){
@@ -120,12 +121,9 @@ elseif ($size == "extra large") {
 }
 
 $tax = 1.13;
-$fPrice =  floatval($sPrice + $tPrice);
-$fPrice = floatval($fPrice * $tax);
-$fPrice = round($fPrice, 2);
-
-"<br>";
-echo "<p class='text' style='font-weight:bold;'>" . "Your pizza will cost $fPrice $" . "</p>";
+$price =  floatval($sPrice + $tPrice);
+$fPrice = floatval($price * $tax);
+$price = round($price, 2);
 
 ?>
         </h4>
@@ -138,6 +136,25 @@ echo "<p class='text' style='font-weight:bold;'>" . "Your pizza will cost $fPric
         <i class="material-icons">Also to be deleted</i>
       </div>
     </div>
+    <div class="demo-card-event mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title mdl-card--expand">
+    <h4> <!-- content here -->
+    <?php
+    echo "<p class='card-text' style='font-weight:bold;'>" . "Subtotal:" . "</p>"; "<br>";
+    echo "<p class='card-text'>" . $price . "</p>"; "<br>";
+    echo "<p class='card-text' style='font-weight:bold;'>" . "Total:" . "</p>"; "<br>";
+    echo "<p class='card-text'>" . "$" . $fPrice  . "</p>";
+    ?>
+    </h4>
+  </div>
+  <div class="mdl-card__actions mdl-card--border">
+    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+      Add to Calendar
+    </a>
+    <div class="mdl-layout-spacer"></div>
+    <i class="material-icons">event</i>
+  </div>
+</div>
     
 <br>
 <br>
