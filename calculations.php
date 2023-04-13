@@ -47,6 +47,10 @@
     <br>
     <br>
     <br>
+
+<table>
+<tr>
+<td>
     <!-- Event card -->
     <style>
     .demo-card-event.mdl-card {
@@ -123,7 +127,7 @@ elseif ($size == "extra large") {
 $tax = 1.13;
 $price =  floatval($sPrice + $tPrice);
 $fPrice = floatval($price * $tax);
-$price = round($price, 2);
+$fPrice = round($price, 2);
 
 ?>
         </h4>
@@ -136,12 +140,14 @@ $price = round($price, 2);
         <i class="material-icons">Also to be deleted</i>
       </div>
     </div>
+</td>
+<td>
     <div class="demo-card-event mdl-card mdl-shadow--2dp">
   <div class="mdl-card__title mdl-card--expand">
     <h4> <!-- content here -->
     <?php
     echo "<p class='card-text' style='font-weight:bold;'>" . "Subtotal:" . "</p>"; "<br>";
-    echo "<p class='card-text'>" . $price . "</p>"; "<br>";
+    echo "<p class='card-text'>" . "$" . $price . "</p>"; "<br>";
     echo "<p class='card-text' style='font-weight:bold;'>" . "Total:" . "</p>"; "<br>";
     echo "<p class='card-text'>" . "$" . $fPrice  . "</p>";
     ?>
@@ -149,13 +155,16 @@ $price = round($price, 2);
   </div>
   <div class="mdl-card__actions mdl-card--border">
     <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      Add to Calendar
+      To be deleted
     </a>
     <div class="mdl-layout-spacer"></div>
-    <i class="material-icons">event</i>
+    <i class="material-icons">Also to be deleted</i>
   </div>
+</td>
+</tr>
+</table>
 </div>
-    
+
 <br>
 <br>
 <br>
