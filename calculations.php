@@ -48,7 +48,7 @@
     <br>
     <br>
 
-<table>
+<center><table>
 <tr>
 <td>
     <!-- Event card -->
@@ -125,9 +125,9 @@ elseif ($size == "extra large") {
 }
 
 $tax = 1.13;
-$price =  floatval($sPrice + $tPrice);
-$fPrice = floatval($price * $tax);
-$fPrice = round($price, 2);
+$noTax =  floatval($sPrice + $tPrice);
+$fPrice = floatval($noTax * $tax);
+$fPrice = round($fPrice, 2);
 
 ?>
         </h4>
@@ -142,12 +142,14 @@ $fPrice = round($price, 2);
     </div>
 </td>
 <td>
+</td>
+<td>
     <div class="demo-card-event mdl-card mdl-shadow--2dp">
   <div class="mdl-card__title mdl-card--expand">
     <h4> <!-- content here -->
     <?php
     echo "<p class='card-text' style='font-weight:bold;'>" . "Subtotal:" . "</p>"; "<br>";
-    echo "<p class='card-text'>" . "$" . $price . "</p>"; "<br>";
+    echo "<p class='card-text'>" . "$" . $noTax . "</p>"; "<br>";
     echo "<p class='card-text' style='font-weight:bold;'>" . "Total:" . "</p>"; "<br>";
     echo "<p class='card-text'>" . "$" . $fPrice  . "</p>";
     ?>
@@ -162,7 +164,7 @@ $fPrice = round($price, 2);
   </div>
 </td>
 </tr>
-</table>
+</table></center>
 </div>
 
 <br>
