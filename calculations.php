@@ -56,7 +56,7 @@
     .demo-card-event.mdl-card {
       width: 256px;
       height: 256px;
-      background: #3E4EB8;
+      background: orange;
     }
     .demo-card-event > .mdl-card__actions {
       border-color: rgba(255, 255, 255, 0.2);
@@ -132,16 +132,11 @@ $fPrice = round($fPrice, 2);
 ?>
         </h4>
       </div>
-      <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-          To be deleted
-        </a>
-        <div class="mdl-layout-spacer"></div>
-        <i class="material-icons">Also to be deleted</i>
       </div>
     </div>
 </td>
 <td>
+  <img src="./images/pizzaPicture.jpeg" alt="Picture of pizza">
 </td>
 <td>
     <div class="demo-card-event mdl-card mdl-shadow--2dp">
