@@ -33,10 +33,10 @@
     <span class="mdl-layout-title">Title</span>
   </div>
   <main class="mdl-layout__content">
-    <section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+    <section class="mdl-layout__tab-panel" id="fixed-tab-1">
       <div class="page-content"><!-- Your content goes here --></div>
     </section>
-    <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+    <section class="mdl-layout__tab-panel is-active" id="fixed-tab-2">
       <div class="page-content"><!-- Your content goes here --></div>
     </section>
     <section class="mdl-layout__tab-panel" id="fixed-tab-3">
