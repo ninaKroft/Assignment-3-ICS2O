@@ -43,7 +43,7 @@
   <main class="mdl-layout__content">
     <div class="page-content"><!-- Your content goes here -->
     <br>
-    <center><h1 class="title">Your order results</h1></center>
+    <center><h3 class="title">Your order results</h3></center>
     <br>
     <br>
     <br>
@@ -51,20 +51,20 @@
     <?php
 
   $size = $_POST['size'];
-   echo("You selected a $size pizza.");
+   echo "<p class='text'>" . "You selected a $size pizza." . "</p>";
    echo("</br>");
 
   $topping = $_POST['formTopping'];
     $N = count($topping);
     if ($N > 0){
-    echo("You selected $N topping(s): ");
+    echo("You selected $N topping(s): "); "<br>";
     for($i=0; $i < $N; $i++)
     {
-      echo($topping[$i] . " ");
+      echo "<p class='text'>" . $topping[$i] . "<br>" . "</p"; "<br>";
     }
   }
   else {
-    echo "<p class='text'>" . "You did not select any toppings." . "</p>";
+    echo "<p class='text'>" . "You did not select any toppings." . "</p>"; "<br>";
   }
 
   if ($N == 1){
@@ -80,10 +80,10 @@
     $tPrice = floatval(3.35);
   }
 
-  if ($size == "Large") {
+  if ($size == "large") {
     $sPrice = floatval(6.00);
   }
-  elseif ($size == "Extra large") {
+  elseif ($size == "extra large") {
     $sPrice = floatval(10.00);
   }
 

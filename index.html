@@ -45,45 +45,41 @@
   </div>
   <main class="mdl-layout__content"> <!-- content goes here -->
     <br>
-    <center><h1 class="title">Welcome to SH pizza</h1></center>
-    <br>
-    <center><h3>Order your pizza using the options below.</h3></center>
-    <br>
+    <center><h3 class="title">Welcome to SH pizza</h3></center>
+    <center><h4 class="text">Order your pizza using the options below.</h3></center>
     <br>
     <div class="page-content"><form action="./calculations.php" method="post">
 
-      <p>What size would you like your pizza to be?</p>
+      <p class="text">What size would you like your pizza to be?</p>
       <br>
       <br>
       <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-        <input type="radio" id="option-1" class="mdl-radio__button" name="size" value="Large" checked>
+        <input type="radio" id="option-1" class="mdl-radio__button" name="size" value="large" checked>
         <span class="mdl-radio__label">Large</span>
       </label>
+      <br>
       <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-        <input type="radio" id="option-2" class="mdl-radio__button" name="size" value="Extra large">
+        <input type="radio" id="option-2" class="mdl-radio__button" name="size" value="extra large">
         <span class="mdl-radio__label">Extra large</span>
       </label>
       <br>
-      <br>
-      
-      <p>Which toppings would you like?</p>
-      <br>
+      <p class="text">Which toppings would you like?</p>
       <br>
       <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
         <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" name="formTopping[]" value="Pepperoni">
-        <span class="mdl-checkbox__label">Pepperoni</span>
+        <span class="option">Pepperoni</span>
       </label>
       <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
         <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" name="formTopping[]" value="Onions">
-        <span class="mdl-checkbox__label">Onions</span>
+        <span class="option">Onions</span>
       </label>
       <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
         <input type="checkbox" id="checkbox-3" class="mdl-checkbox__input" name="formTopping[]" value="Peppers">
-        <span class="mdl-checkbox__label">Peppers</span>
+        <span class="option">Peppers</span>
       </label>
       <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-4">
         <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input" name="formTopping[]" value="Meatballs">
-        <span class="mdl-checkbox__label">Meatballs</span>
+        <span class="option">Meatballs</span>
       </label>
       <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">
         Button
