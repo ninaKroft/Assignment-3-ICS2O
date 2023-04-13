@@ -47,45 +47,77 @@
     <br>
     <br>
     <br>
-
-    <?php
-
-  $size = $_POST['size'];
-   echo "<p class='text'>" . "You selected a $size pizza." . "</p>";
-   echo("</br>");
-
-  $topping = $_POST['formTopping'];
-    $N = count($topping);
-    if ($N > 0){
-    echo("You selected $N topping(s): "); "<br>";
-    for($i=0; $i < $N; $i++)
-    {
-      echo "<p class='text'>" . $topping[$i] . "<br>" . "</p"; "<br>";
+    <!-- Event card -->
+    <style>
+    .demo-card-event.mdl-card {
+      width: 256px;
+      height: 256px;
+      background: #3E4EB8;
     }
-  }
-  else {
-    echo "<p class='text'>" . "You did not select any toppings." . "</p>"; "<br>";
-  }
+    .demo-card-event > .mdl-card__actions {
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .demo-card-event > .mdl-card__title {
+      align-items: flex-start;
+    }
+    .demo-card-event > .mdl-card__title > h4 {
+      margin-top: 0;
+    }
+    .demo-card-event > .mdl-card__actions {
+      display: flex;
+      box-sizing:border-box;
+      align-items: center;
+    }
+    .demo-card-event > .mdl-card__actions > .material-icons {
+      padding-right: 10px;
+    }
+    .demo-card-event > .mdl-card__title,
+    .demo-card-event > .mdl-card__actions,
+    .demo-card-event > .mdl-card__actions > .mdl-button {
+      color: #fff;
+    }
+    </style>
 
-  if ($N == 1){
-    $tPrice = floatval(1.00);
-  }
-  elseif ($N == 2){
-    $tPrice = floatval(1.75);
-  }
-  elseif ($N == 3){
-    $tPrice = floatval(2.50);
-  }
-  elseif ($N == 4){
-    $tPrice = floatval(3.35);
-  }
+    <center><div class="demo-card-event mdl-card mdl-shadow--2dp"></center>
+      <div class="mdl-card__title mdl-card--expand">
+        <h4>
+        <?php
 
-  if ($size == "large") {
-    $sPrice = floatval(6.00);
+$size = $_POST['size'];
+ echo "<p class='text'>" . "You selected a(n) $size pizza." . "</p>"; "<br>";
+
+$topping = $_POST['formTopping'];
+  $N = count($topping);
+  if ($N > 0){
+  echo "<p class='text'>" . "You selected $N topping(s): " . "</p>"; "<br>";
+  for($i=0; $i < $N; $i++)
+  {
+    echo "<p class='text'>" . $topping[$i] . "<br>" . "</p"; "<br>";
   }
-  elseif ($size == "extra large") {
-    $sPrice = floatval(10.00);
-  }
+}
+else {
+  echo "<p class='text'>" . "You did not select any toppings." . "</p>"; "<br>";
+}
+
+if ($N == 1){
+  $tPrice = floatval(1.00);
+}
+elseif ($N == 2){
+  $tPrice = floatval(1.75);
+}
+elseif ($N == 3){
+  $tPrice = floatval(2.50);
+}
+elseif ($N == 4){
+  $tPrice = floatval(3.35);
+}
+
+if ($size == "large") {
+  $sPrice = floatval(6.00);
+}
+elseif ($size == "extra large") {
+  $sPrice = floatval(10.00);
+}
 
 $tax = 1.13;
 $fPrice =  floatval($sPrice + $tPrice);
@@ -95,6 +127,17 @@ $fPrice = round($fPrice, 2);
 echo "<p class='text'>" . "Your pizza will cost $fPrice $" . "</p>";
 
 ?>
+        </h4>
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+          To be deleted
+        </a>
+        <div class="mdl-layout-spacer"></div>
+        <i class="material-icons">Also to be deleted</i>
+      </div>
+    </div>
+    
 <br>
 <br>
 <br>
