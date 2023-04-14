@@ -5,8 +5,8 @@
 
 sizeCost = float(0)
 topCost = float(0)
-listOfI = ""
 numToppings = int(0)
+
 
 def pizzaSize():
     print("Would you like a large pizza or an extra-large pizza? Enter 'l' for large or 'xl' for extra large.")
@@ -67,4 +67,4 @@ def finalCost():
     return finalCost
 
 print("Welcome to SH pizza!")
-print("Your pizza will cost", finalCost(), "$")
+print("Your pizza will cost $", finalCost())
