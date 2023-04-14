@@ -24,10 +24,10 @@
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link" href="./index.html">Return to the order page</a>
+        <a class="mdl-navigation__link" href=""></a>
+        <a class="mdl-navigation__link" href=""></a>
+        <a class="mdl-navigation__link" href=""></a>
       </nav>
     </div>
   </header>
@@ -155,8 +155,9 @@ $fPrice = round($fPrice, 2);
 </tr>
 </table></center>
 </div>
-
 <br>
+<br>
+<center><p class="text">Thank you for ordering at SH pizza!</p></center>
 <br>
 <br>
 <!-- Footer -->
